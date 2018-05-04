@@ -1,11 +1,19 @@
 page-home {
-    .podometre{
+    
+    .podometre-container {
         width: 90%;
-        height: 90vh;
-        background-color: red;
 
-        .walk{}
-        hr{}
-        #passes{}
+        .podometre {
+            
+            .passes-container {
+
+            }
+            .passes {
+
+            }
+            .walk {
+
+            }
+        }
     }
 }
