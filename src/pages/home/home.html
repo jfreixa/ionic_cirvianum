@@ -1,4 +1,4 @@
-<ion-content padding>
+<ion-content padding *ngIf="topPlayers">
     <div class="podometre-container">
       <div class="podometre">
         <ion-avatar>
@@ -12,13 +12,13 @@
       <hr>
       <div class="leaderboard">
         <ion-avatar>
-            <img src="">
+            <img [src]="topPlayers[0].image">
         </ion-avatar>
         <ion-avatar>
-            <img src="">
+            <img [src]="topPlayers[1].image">
         </ion-avatar>
         <ion-avatar>
-            <img src="">
+            <img [src]="topPlayers[2].image">
         </ion-avatar>
         <img src="/assets/imgs/podio.svg">
       </div>

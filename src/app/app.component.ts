@@ -19,9 +19,9 @@ export class MyApp {
       splashScreen.hide();
     });
     /* tslint:disable */
-
     const settings: firebase.firestore.Settings = { timestampsInSnapshots: true };
     db.app.firestore().settings(settings);
+    /* tslint:enable */
   }
-  /* tslint:enable */
+  
 }
