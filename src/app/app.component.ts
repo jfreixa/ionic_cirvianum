@@ -12,28 +12,16 @@ import { HomePage } from '../pages/home/home';
 
 export class MyApp {
   rootPage: any = HomePage;
-  public topPlayers: any;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, db: AngularFirestore) {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+    /* tslint:disable */
 
     const settings: firebase.firestore.Settings = { timestampsInSnapshots: true };
     db.app.firestore().settings(settings);
-
-    db.collection('usuaris').valueChanges().subscribe(val => {
-      this.topPlayers = val.sort(this.ordenarPasses);
-      console.log(val);
-    });
   }
-
-  private ordenarPasses(a, b) {
-  if (a.passes < b.passes)
-    return 1;
-  if (a.passes > b.passes)
-    return -1;
-  return 0;
-  }
+  /* tslint:enable */
 }
