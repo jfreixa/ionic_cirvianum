@@ -3,9 +3,20 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
+import { AngularFireModule } from 'angularfire2';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { AngularFirestore } from 'angularfire2/firestore';
+
+var config = {
+  apiKey: "AIzaSyBmkL-0QrpsmMf6pIKpNxyjrpBvYreDELg",
+  authDomain: "ioniccirvianum.firebaseapp.com",
+  databaseURL: "https://ioniccirvianum.firebaseio.com",
+  projectId: "ioniccirvianum",
+  storageBucket: "",
+  messagingSenderId: "1000059520478"
+};
+
 
 @NgModule({
   declarations: [
@@ -14,7 +25,8 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(config)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -23,6 +35,7 @@ import { HomePage } from '../pages/home/home';
   ],
   providers: [
     StatusBar,
+    AngularFirestore,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
