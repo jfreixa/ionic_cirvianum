@@ -4,11 +4,10 @@
       <ion-avatar>
         <img [src]="usuari.image">
       </ion-avatar>
-      <p>
-        <a class="logout" (click)="logout()">Logout</a>
-      </p>
+      <h3 class="text-center nom">{{ usuari.nom }}</h3>
+      <p><a class="logout" (click)="logout()">Logout</a></p>
       <div class="passes-container">
-        <span id="passes">{{ usuari.passes }}</span>
+        <span class="passes">{{ usuari.passes }}</span>
         <ion-icon class="walk" name="walk"></ion-icon>
       </div>
     </div>
@@ -28,6 +27,8 @@
       </ion-avatar>
       <img class="podium" src="/assets/imgs/podio.svg">
     </div>
-    <a href="#"><img class="btn-leaderboard" src="/assets/imgs/leaderboard.svg"></a>
+    <div class="footer">
+        <img class="btn-leaderboard" src="/assets/imgs/leaderboard.svg">
+    </div>
   </div>
 </ion-content>

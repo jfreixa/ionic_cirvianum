@@ -1,35 +1,45 @@
 page-home {
-    background-color: #eaeaea;
+    ion-content {
+        background-color: #eeeeee !important;
+    }
 
     .podometre-container {
         width: 90%;
         margin: 30px auto;
 
         p {
+            margin: 0;
             text-align: center;
             .logout {
                 text-decoration: none;
             }
+        }
+
+        .nom {
+            margin: 0;
+            margin-top: 5px;
         }
         .podometre {
             width: 90%;
             margin: auto;
 
             ion-avatar img{
-                width: 90px;
-                height: 90px;
+                width: 150px;
+                height: 150px;
                 margin: auto;
+                border-radius: 50%;
             }
-
             .passes-container {
                 text-align: center;
-            
-                #passes{
-                    font-size: 6rem;
+                margin-top: 20px;
+                margin-bottom: 30px;
+
+                .passes{
+                    font-size: 3rem;
                 }
                 .walk {
                     margin-left: 5px;
-                    font-size: 6rem;
+                    font-size: 3rem;
                 }
             }
         }
@@ -37,9 +47,9 @@ page-home {
 
     .leaderboard {
         position: relative;
-        
+
         ion-avatar {
-            width: 60px;
+            width: 70px;
 
             p {
                 text-align: center;
@@ -47,22 +57,28 @@ page-home {
             }
     
             img {
-            width: 60px;
-            height: 60px;
+            width: inherit;
+            height: 70px;
             border-radius: 50%;
             }
         }
 
         .top-1 {
             position: absolute;
+            margin: 0 auto;
             left: 0;
             right: 0;
+            top: 30px;
         }
         .top-2 {
             position: absolute;
+            left: 180px;
+            top: 90px;
         }
         .top-3 {
             position: absolute;
+            left: 46px;
+            top: 120px;
         }
 
         .podium {
@@ -72,4 +88,17 @@ page-home {
         }
 
     }
+
+    .footer {
+        width: 100%;
+        max-height: 70px;
+        display: flex;
+        justify-content: center;
+
+        .btn-leaderboard{
+            margin-top: 20px;
+            width: 50px;
+        }
+    }
+
 }
