@@ -1,30 +1,32 @@
 <ion-content padding *ngIf="topPlayers">
-    <div class="podometre-container">
-      <div class="podometre">
-        <ion-avatar>
-          <img src="">
-        </ion-avatar>
+  <div class="podometre-container">
+    <div class="podometre" *ngIf="usuari">
+      <ion-avatar>
+        <img [src]="usuari.image">
+      </ion-avatar>
+      <p>
         <a class="logout" href="#">Logout</a>
-        <div class="passes-container">
-            <span id="passes">2131</span> <ion-icon class="walk" name="walk"></ion-icon>
-        </div>
-      </div>
-  
-      <hr>
-      <div class="leaderboard">
-        <ion-avatar class="top-1">
-            <p>500</p>
-            <img [src]="topPlayers[0].image">
-        </ion-avatar>
-        <ion-avatar class="top-2">
-            <p>430</p>
-            <img [src]="topPlayers[1].image">
-        </ion-avatar>
-        <ion-avatar class="top-3">
-            <p>320</p>
-            <img [src]="topPlayers[2].image">
-        </ion-avatar>
-        <img class="podium" src="/assets/imgs/podio.svg">
+      </p>
+      <div class="passes-container">
+        <span id="passes">{{ usuari.passes }}</span>
+        <ion-icon class="walk" name="walk"></ion-icon>
       </div>
     </div>
-  </ion-content>
+    <hr>
+    <div class="leaderboard">
+      <ion-avatar class="top-1">
+        <p>500</p>
+        <img [src]="topPlayers[0].image">
+      </ion-avatar>
+      <ion-avatar class="top-2">
+        <p>430</p>
+        <img [src]="topPlayers[1].image">
+      </ion-avatar>
+      <ion-avatar class="top-3">
+        <p>320</p>
+        <img [src]="topPlayers[2].image">
+      </ion-avatar>
+      <img class="podium" src="/assets/imgs/podio.svg">
+    </div>
+  </div>
+</ion-content>

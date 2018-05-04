@@ -11,6 +11,7 @@ import { LoginPage } from '../pages/login/login';
 import { LeaderboardPage } from '../pages/leaderboard/leaderboard';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { IonicStorageModule } from '@ionic/storage';
+import { Storage } from '@ionic/storage';
 
 var config = {
   apiKey: "AIzaSyBmkL-0QrpsmMf6pIKpNxyjrpBvYreDELg",
