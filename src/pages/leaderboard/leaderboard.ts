@@ -12,11 +12,8 @@ export class LeaderboardPage {
 
   constructor(public navCtrl: NavController, public db: AngularFirestore, public navParams: NavParams) {
     this.myNom = navParams.get('nom');
-    console.log("ola");
-    console.log(this.myNom);
     db.collection('usuaris', ref => ref.limit(10)).valueChanges().subscribe(val => {
       this.topPlayers = val.sort(this.ordenarPasses);
-      console.log(this.topPlayers)
     });
   }
 

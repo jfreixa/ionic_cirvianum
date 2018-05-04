@@ -1,12 +1,11 @@
 <ion-content padding>
-    aaa
     <ion-list>
         <ion-item *ngFor="let topPlayer of topPlayers">
-            <ion-thumbnail item-start *ngClass="{active: topPlayer.name == myName}">
+            <ion-thumbnail item-start>
                 <img [src]="topPlayer.image">
             </ion-thumbnail>
             <h2>{{ topPlayer.nom }}</h2>
-            <p>{{ topPlayer.passos }}</p>
+            <p>{{ topPlayer.passes }}</p>
         </ion-item>
     </ion-list>
 </ion-content>
