@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Storage } from '@ionic/storage';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
   public topPlayers: Array<object>;
   public usuari: object;
@@ -14,7 +16,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public db: AngularFirestore, private storage: Storage) {
     this.storage.get('uid').then(key => {
       db.doc(`usuaris/${key}`).valueChanges().subscribe(val => {
-        if(val) this.usuari = val;
+        if (val) this.usuari = val;
       });
     });
 
@@ -29,5 +31,9 @@ export class HomePage {
     if (a.passes > b.passes)
       return -1;
     return 0;
-    }
+  }
+  public logout(){
+    this.storage.clear();
+    this.navCtrl.setRoot(LoginPage);
+  }
 }
