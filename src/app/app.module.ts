@@ -7,6 +7,10 @@ import { AngularFireModule } from 'angularfire2';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { LoginPage } from '../pages/login/login';
+import { LeaderboardPage } from '../pages/leaderboard/leaderboard';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { IonicStorageModule } from '@ionic/storage';
 
 var config = {
   apiKey: "AIzaSyBmkL-0QrpsmMf6pIKpNxyjrpBvYreDELg",
@@ -21,21 +25,26 @@ var config = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage,
+    LeaderboardPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(config)
+    AngularFireModule.initializeApp(config),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     AngularFirestore,
+    AngularFireAuth,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
