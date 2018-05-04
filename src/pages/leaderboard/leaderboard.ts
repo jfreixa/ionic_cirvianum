@@ -24,5 +24,4 @@ export class LeaderboardPage {
       return -1;
     return 0;
   }
-
 }

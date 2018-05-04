@@ -4,6 +4,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { Storage } from '@ionic/storage';
 import { LoginPage } from '../login/login';
 import { LeaderboardPage } from '../leaderboard/leaderboard';
+import { Pedometer } from '@ionic-native/pedometer';
 
 @Component({
   selector: 'page-home',
@@ -14,16 +15,18 @@ export class HomePage {
   public topPlayers: Array<object>;
   public usuari: any;
 
-  constructor(public navCtrl: NavController, public db: AngularFirestore, private storage: Storage) {
+  constructor(public navCtrl: NavController, public db: AngularFirestore, private storage: Storage, private pedometer: Pedometer) {
     this.storage.get('uid').then(key => {
       db.doc(`usuaris/${key}`).valueChanges().subscribe(val => {
         if (val) this.usuari = val;
       });
     });
-
-
     db.collection('usuaris', ref => ref.limit(3)).valueChanges().subscribe(val => {
       this.topPlayers = val.sort(this.ordenarPasses);
+    });
+
+    pedometer.isStepCountingAvailable().then(val => {
+      alert(val);
     });
   }
 
@@ -40,7 +43,7 @@ export class HomePage {
     this.navCtrl.setRoot(LoginPage);
   }
 
-  public gotoRankings(){
-    this.navCtrl.push(LeaderboardPage, {nom: this.usuari.nom});
+  public gotoRankings() {
+    this.navCtrl.push(LeaderboardPage, { nom: this.usuari.nom });
   }
 }

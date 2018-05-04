@@ -12,6 +12,7 @@ import { LeaderboardPage } from '../pages/leaderboard/leaderboard';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { IonicStorageModule } from '@ionic/storage';
 import { Storage } from '@ionic/storage';
+import { Pedometer } from '@ionic-native/pedometer';
 
 var config = {
   apiKey: "AIzaSyBmkL-0QrpsmMf6pIKpNxyjrpBvYreDELg",
@@ -48,6 +49,7 @@ var config = {
     AngularFirestore,
     AngularFireAuth,
     SplashScreen,
+    Pedometer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

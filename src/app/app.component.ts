@@ -20,14 +20,14 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
-    /* tslint:disable */
+    /*
     const settings: firebase.firestore.Settings = { timestampsInSnapshots: true };
     db.app.firestore().settings(settings);
-    /* tslint:enable */
+    */
 
     this.storage.get('uid').then(val => {
-      if(val) this.rootPage = HomePage;
+      if (val) this.rootPage = HomePage;
     })
   }
-  
+
 }
