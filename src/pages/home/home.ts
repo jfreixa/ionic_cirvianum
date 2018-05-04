@@ -41,6 +41,7 @@ export class HomePage {
   }
 
   public gotoRankings(){
+    console.log("click")
     this.navCtrl.push(LeaderboardPage, {nom: this.usuari.nom});
   }
 }

@@ -40,7 +40,8 @@ var config = {
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    LeaderboardPage
   ],
   providers: [
     StatusBar,
