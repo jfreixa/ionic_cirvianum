@@ -4,6 +4,7 @@
         <ion-avatar>
           <img src="">
         </ion-avatar>
+        <a class="logout" href="#">Logout</a>
         <div class="passes-container">
             <span id="passes">500</span> <ion-icon class="walk" name="walk"></ion-icon>
         </div>
@@ -11,16 +12,19 @@
   
       <hr>
       <div class="leaderboard">
-        <ion-avatar>
+        <ion-avatar class="top-1">
+            <p>500</p>
             <img [src]="topPlayers[0].image">
         </ion-avatar>
-        <ion-avatar>
+        <ion-avatar class="top-2">
+            <p>430</p>
             <img [src]="topPlayers[1].image">
         </ion-avatar>
-        <ion-avatar>
+        <ion-avatar class="top-3">
+            <p>320</p>
             <img [src]="topPlayers[2].image">
         </ion-avatar>
-        <img src="/assets/imgs/podio.svg">
+        <img class="podium" src="/assets/imgs/podio.svg">
       </div>
     </div>
   </ion-content>
