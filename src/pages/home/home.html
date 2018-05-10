@@ -15,15 +15,15 @@
     <hr>
     <div class="leaderboard">
       <ion-avatar class="top-1">
-        <p>500</p>
+        <p>{{ topPlayers[0].passes }}</p>
         <img [src]="topPlayers[0].image">
       </ion-avatar>
       <ion-avatar class="top-2">
-        <p>430</p>
+        <p>{{ topPlayers[1].passes }}</p>
         <img [src]="topPlayers[1].image">
       </ion-avatar>
       <ion-avatar class="top-3">
-        <p>320</p>
+        <p>{{ topPlayers[2].passes }}</p>
         <img [src]="topPlayers[2].image">
       </ion-avatar>
       <img class="podium" src="/assets/imgs/podio.svg">
