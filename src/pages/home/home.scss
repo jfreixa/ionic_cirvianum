@@ -1,101 +1,98 @@
 page-home {
+  .podometre-container {
+    width: 90%;
+    margin: 30px auto;
 
-    .podometre-container {
-        width: 90%;
-        margin: 30px auto;
-
-        p {
-            margin: 0;
-            text-align: center;
-            .logout {
-                text-decoration: none;
-            }
-        }
-
-        .nom {
-            margin: 0;
-            margin-top: 5px;
-        }
-        .podometre {
-            width: 90%;
-            margin: auto;
-
-            ion-avatar img{
-                width: 150px;
-                height: 150px;
-                margin: auto;
-                border-radius: 50%;
-            }
-            .passes-container {
-                text-align: center;
-                margin-top: 20px;
-                margin-bottom: 30px;
-
-                .passes{
-                    font-size: 3rem;
-                }
-                .walk {
-                    margin-left: 5px;
-                    font-size: 3rem;
-                }
-            }
-        }
+    p {
+      margin: 0;
+      text-align: center;
+      .logout {
+        text-decoration: none;
+      }
     }
 
-    .leaderboard {
-        position: relative;
+    .nom {
+      margin: 0;
+      margin-top: 5px;
+    }
+    .podometre {
+      width: 90%;
+      margin: auto;
 
-        ion-avatar {
-            width: 70px;
+      ion-avatar img {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        border-radius: 50%;
+      }
+      .passes-container {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
 
-            p {
-                text-align: center;
-                margin: 0;
-            }
-    
-            img {
-            width: inherit;
-            height: 70px;
-            border-radius: 50%;
-            }
+        .passes {
+          font-size: 3rem;
         }
+        .walk {
+          margin-left: 5px;
+          font-size: 3rem;
+        }
+      }
+    }
+  }
 
-        .top-1 {
-            position: absolute;
-            margin: 0 auto;
-            left: 0;
-            right: 0;
-            top: 30px;
-        }
-        .top-2 {
-            position: absolute;
-            left: 180px;
-            top: 90px;
-        }
-        .top-3 {
-            position: absolute;
-            left: 46px;
-            top: 120px;
-        }
+  .leaderboard {
+    position: relative;
 
-        .podium {
-            margin-top: 90px;
-            width: 100%;
-            height: 200px;
-        }
+    ion-avatar {
+      width: 70px;
 
+      p {
+        text-align: center;
+        margin: 0;
+      }
+
+      img {
+        width: inherit;
+        height: 70px;
+        border-radius: 50%;
+      }
     }
 
-    .footer {
-        width: 100%;
-        max-height: 70px;
-        display: flex;
-        justify-content: center;
-
-        .btn-leaderboard{
-            margin-top: 20px;
-            width: 50px;
-        }
+    .top-1 {
+      position: absolute;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      top: 30px;
+    }
+    .top-2 {
+      position: absolute;
+      left: 180px;
+      top: 90px;
+    }
+    .top-3 {
+      position: absolute;
+      left: 46px;
+      top: 120px;
     }
 
+    .podium {
+      margin-top: 90px;
+      width: 100%;
+      height: 200px;
+    }
+  }
+
+  .footer {
+    width: 100%;
+    max-height: 70px;
+    display: flex;
+    justify-content: center;
+
+    .btn-leaderboard {
+      margin-top: 20px;
+      width: 50px;
+    }
+  }
 }

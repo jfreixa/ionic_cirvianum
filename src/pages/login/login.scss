@@ -1,18 +1,17 @@
-page-login{
-    .container{
-        width:100%;
-        height: 100%;
+page-login {
+  .container {
+    width: 100%;
+    height: 100%;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    ion-list {
-        width: 90%;
-    }
-    .scroll-content{
-        padding-bottom: 0px !important;
-    }
-
+  ion-list {
+    width: 90%;
+  }
+  .scroll-content {
+    padding-bottom: 0px !important;
+  }
 }
